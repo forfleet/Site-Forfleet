@@ -9,43 +9,35 @@
     * {
       margin: 0;
       padding: 0;
-      border: 0;
       box-sizing: border-box;
     }
-
     html, body {
       width: 100%;
       height: 100%;
       overflow: hidden;
       background-color: #000;
     }
-
-    /* Imagem ocupa toda a tela, sem cortes nem barras */
     img.fullscreen {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
       object-fit: cover;
       object-position: center;
       display: block;
       z-index: 1;
     }
-
-    /* Link fixo no rodapé, sobre a imagem */
     a.politica {
       position: fixed;
-      bottom: 10px;
+      bottom: 14px;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 13px;
-      color: white;
+      font-size: 14px;
+      color: #ffffff;
       text-decoration: underline;
       opacity: 0.8;
       z-index: 2;
     }
-
     a.politica:hover {
       opacity: 1;
     }
