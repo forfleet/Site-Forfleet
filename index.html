@@ -17,6 +17,7 @@
       overflow: hidden;
       background-color: #000;
     }
+
     img.fullscreen {
       position: fixed;
       inset: 0;
@@ -26,7 +27,14 @@
       object-position: center;
       display: block;
       z-index: 1;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      image-rendering: high-quality;
+      -ms-interpolation-mode: nearest-neighbor;
+      transform: translateZ(0);
+      backface-visibility: hidden;
     }
+
     a.politica {
       position: fixed;
       bottom: 14px;
@@ -38,6 +46,7 @@
       opacity: 0.8;
       z-index: 2;
     }
+
     a.politica:hover {
       opacity: 1;
     }
