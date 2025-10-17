@@ -6,63 +6,53 @@
   <title>Forfleet</title>
   <link rel="icon" type="image/png" href="fiveicon.png">
   <style>
-    /* Reset total */
-    html, body {
+    * {
       margin: 0;
       padding: 0;
-      height: 100%;
+      border: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
       width: 100%;
-      background-color: #000; /* evita bordas brancas durante carregamento */
-    }
-
-    /* Remove possíveis margens padrão do GitHub Pages */
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      height: 100%;
       overflow: hidden;
+      background-color: #000;
     }
 
-    /* Imagem ocupa 100% da tela */
-    .bg {
-      position: fixed;
+    /* Imagem ocupa toda a tela */
+    img.fullscreen {
+      position: absolute;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       object-position: center;
-      border: none;
-      margin: 0;
-      padding: 0;
+      display: block;
       z-index: 1;
     }
 
-    /* Rodapé sobre a imagem */
-    footer {
+    /* Link fixo no rodapé */
+    a.politica {
       position: fixed;
       bottom: 10px;
-      width: 100%;
-      text-align: center;
-      font-size: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 13px;
+      color: white;
+      text-decoration: underline;
+      opacity: 0.8;
       z-index: 2;
     }
 
-    footer a {
-      color: #ffffff;
-      text-decoration: underline;
-      opacity: 0.8;
-    }
-
-    footer a:hover {
+    a.politica:hover {
       opacity: 1;
     }
   </style>
 </head>
 <body>
-  <img src="Img/forfleet-espera.png" alt="Forfleet" class="bg">
-  <footer>
-    <a href="politica-de-privacidade.html">Política de Privacidade</a>
-  </footer>
+  <img src="images/forfleet-espera.png" alt="Forfleet" class="fullscreen">
+  <a href="politica-de-privacidade.html" class="politica">Política de Privacidade</a>
 </body>
 </html>
