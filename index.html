@@ -19,9 +19,11 @@
     }
 
     .imagem-container img {
-      width: 100%;       
-      height: auto;      
+      width: 100%;
+      max-height: 90vh;
+      height: auto;
       display: block;
+      object-fit: contain;
       image-rendering: -webkit-optimize-contrast;
       image-rendering: crisp-edges;
       image-rendering: high-quality;
@@ -44,6 +46,18 @@
 
     a.politica:hover {
       opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .imagem-container img {
+        max-height: 70vh;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .imagem-container img {
+        max-height: 50vh;
+      }
     }
   </style>
 </head>
