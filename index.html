@@ -6,52 +6,48 @@
     <title>Forfleet</title>
     <link rel="icon" type="image/png" href="fiveicon.png">
     <style>
-        body, html {
+        /* Remove margens e faz a imagem ocupar a tela inteira */
+        html, body {
             margin: 0;
             padding: 0;
             height: 100%;
-            font-family: Arial, sans-serif;
-            background-color: #ffffff; /* pode ajustar para combinar com a imagem */
+            width: 100%;
+            overflow: hidden; /* impede rolagem */
         }
 
-        /* Container central da imagem */
-        .content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            flex-direction: column;
-        }
-
+        /* Imagem em tela cheia */
         img {
-            max-width: 90%;
-            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* mantém proporção, cobre toda a tela */
         }
 
-        /* Rodapé discreto */
+        /* Rodapé fixo e sobreposto à imagem */
         footer {
             position: fixed;
             bottom: 10px;
             width: 100%;
             text-align: center;
-            font-size: 12px; /* menor que antes para ser discreto */
-            color: rgba(0,0,0,0.6); /* cor leve, transparente para suavizar */
+            font-size: 12px;
+            color: rgba(255,255,255,0.8); /* texto branco suave */
+            z-index: 10; /* garante que fique acima da imagem */
         }
 
         footer a {
-            color: rgba(0,0,255,0.8); /* azul leve, sublinhado */
+            color: rgba(255,255,255,0.9);
             text-decoration: underline;
         }
 
         footer a:hover {
-            color: rgba(0,0,255,1); /* destaque no hover */
+            color: #ffffff; /* branco total no hover */
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <img src="images/forfleet-espera.png" alt="Forfleet Espera">
-    </div>
+    <img src="images/forfleet-espera.png" alt="Forfleet Espera">
     <footer>
         <a href="politica-de-privacidade.html">Política de Privacidade</a>
     </footer>
