@@ -11,22 +11,26 @@
       padding: 0;
       box-sizing: border-box;
     }
-    html, body {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
+
+    body {
       background-color: #000;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      line-height: 1.5;
     }
 
-    img.fullscreen {
-      position: fixed;
-      inset: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      object-position: center;
+    .imagem-container {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .imagem-container img {
+      width: 100%;
+      height: auto;
       display: block;
-      z-index: 1;
       image-rendering: -webkit-optimize-contrast;
       image-rendering: crisp-edges;
       image-rendering: high-quality;
@@ -35,16 +39,18 @@
       backface-visibility: hidden;
     }
 
+    .conteudo {
+      padding: 20px;
+      text-align: center;
+    }
+
     a.politica {
-      position: fixed;
-      bottom: 14px;
-      left: 50%;
-      transform: translateX(-50%);
+      display: inline-block;
+      margin-top: 20px;
       font-size: 14px;
       color: #ffffff;
       text-decoration: underline;
       opacity: 0.8;
-      z-index: 2;
     }
 
     a.politica:hover {
@@ -53,7 +59,13 @@
   </style>
 </head>
 <body>
-  <img src="images/forfleet-espera.png" alt="Forfleet" class="fullscreen">
-  <a href="politica-de-privacidade.html" class="politica">Política de Privacidade</a>
+  <div class="imagem-container">
+    <img src="images/forfleet-espera.png" alt="Forfleet">
+  </div>
+
+  <div class="conteudo">
+    
+    <a href="politica-de-privacidade.html" class="politica">Política de Privacidade</a>
+  </div>
 </body>
 </html>
