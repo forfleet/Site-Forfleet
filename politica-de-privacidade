@@ -45,7 +45,7 @@
 <body>
   <div class="site">
     <header>
-      <images src="images/logo-forfleet.png" alt="Forfleet" style="max-height:70px;">
+      <img src="images/logo-forfleet.png" alt="Forfleet" style="max-height:70px;">
         </header>
 
     <main>
